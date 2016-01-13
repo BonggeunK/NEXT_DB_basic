@@ -11,8 +11,8 @@ from flaskext.mysql import MySQL
 app = Flask(__name__)
 mysql = MySQL()
 
-app.config['MYSQL_DATABASE_USER'] = '아이디들어갈예정'
-app.config['MYSQL_DATABASE_PASSWORD'] = '비번들어갈예정'
+app.config['MYSQL_DATABASE_USER'] = 'kbgiskbg'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'mysql'
 app.config['MYSQL_DATABASE_DB'] = 'emotionDB'
 app.secret_key = 'emotionDB_secret_key'
 
@@ -37,7 +37,6 @@ def query_db(query, one=False):
 			data.append(dict(zip(columns, row)))
 	
 	return data
-
 
 
 # SELECT userid FROM userInfo // using user_email
@@ -78,7 +77,6 @@ def teardown_request(exception):
 		g.db.close()
 
 
-
 @app.route('/')
 def hello_world():
 	return 'Hello World!'
@@ -98,7 +96,6 @@ def login():
 	g.user = session['username']
 
 	return user_email + " log in OK."
-
 
 
 @app.route('/insertEmotion', methods=["POST"])
@@ -157,8 +154,5 @@ def loadData():
 	return jsonify(results = result)	
 
 
-
-
 if __name__ == '__main__':
 	app.run(debug=True, port=5001)
-

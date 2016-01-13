@@ -16,7 +16,7 @@
 	_emotion = 1;
 	_subwayStation = 201;
 	
-	_emotionArray = @[@"ㅎㅎㅎ", @"귀차나", @"ㅋㅋㅋ", @"아쒸", @"웬열?", @"무섭", @"ㅠㅠ", @"오쇼숏"];
+	_emotionArray = @[@"ㅎㅎㅎ", @"귀차나", @"ㅋㅋㅋ", @"아쒸", @"웬열?", @"무섭", @"ㅠㅠ", @"으헝헝"];
 	_stationArray = @[@"시청역", @"을지로입구역", @"을지로3가역", @"을지로4가역", @"동대문역사문화공원역",
 					  @"신당역", @"상왕십리역", @"왕십리역", @"한양대역", @"뚝섬역",
 					  @"성수역", @"건국대입구역", @"구의역", @"강변역", @"잠실나루역",
@@ -39,12 +39,15 @@
 		return _stationArray.count;
 }
 
-- (NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+
+- (NSAttributedString*) pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+	
 	if (pickerView.tag == 2)
-		return [NSString stringWithFormat:@"%@", _emotionArray[row]];
+		return [[NSAttributedString alloc] initWithString:_emotionArray[row] attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 	else
-		return [NSString stringWithFormat:@"%@", _stationArray[row]];
+		return [[NSAttributedString alloc] initWithString:_stationArray[row] attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
+
 
 - (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
 	if (pickerView.tag == 2)

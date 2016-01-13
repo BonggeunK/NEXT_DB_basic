@@ -77,20 +77,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금 어디?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ST0-35-4Yy">
-                                <rect key="frame" x="250" y="20" width="100" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금 어디인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ST0-35-4Yy">
+                                <rect key="frame" x="240" y="40" width="120" height="21"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="k6e-yt-Vzg"/>
+                                    <constraint firstAttribute="width" constant="120" id="Gc8-go-EdB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2E-CO-qYJ">
+                            <pickerView tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2E-CO-qYJ">
                                 <rect key="frame" x="0.0" y="44" width="600" height="216"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098495176174496643" green="0.25972630033557054" blue="0.09338296979865772" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Dea-Fz-H2k" id="iYj-UO-XD7"/>
                                     <outlet property="delegate" destination="Dea-Fz-H2k" id="Fko-cv-ouR"/>
@@ -99,7 +99,7 @@
                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wo-m0-Do9">
                                 <rect key="frame" x="0.0" y="338" width="600" height="216"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.043137254901960784" green="0.062745098039215685" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Dea-Fz-H2k" id="XYT-5N-OGh"/>
                                     <outlet property="delegate" destination="Dea-Fz-H2k" id="PqB-67-2zP"/>
@@ -121,8 +121,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="QDA-1G-Cct"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="선택">
-                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.38039215686274508" green="0.67450980392156867" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButton:" destination="Dea-Fz-H2k" eventType="touchUpInside" id="uIK-bN-HeT"/>
@@ -134,16 +135,16 @@
                         <color key="backgroundColor" red="0.043137254901960784" green="0.062745098039215685" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5wo-m0-Do9" firstAttribute="trailing" secondItem="q2E-CO-qYJ" secondAttribute="trailing" id="8Ap-RQ-oyy"/>
-                            <constraint firstItem="ST0-35-4Yy" firstAttribute="centerX" secondItem="J8b-mR-JdM" secondAttribute="centerX" id="BN7-8H-Ljy"/>
+                            <constraint firstItem="ST0-35-4Yy" firstAttribute="top" secondItem="fOW-35-bcq" secondAttribute="bottom" constant="20" id="Diy-3a-NqR"/>
                             <constraint firstItem="nA1-wO-IGR" firstAttribute="centerX" secondItem="5wo-m0-Do9" secondAttribute="centerX" id="Ebf-CC-1qD"/>
+                            <constraint firstItem="ST0-35-4Yy" firstAttribute="centerX" secondItem="J8b-mR-JdM" secondAttribute="centerX" id="GIP-wJ-NEF"/>
                             <constraint firstItem="5wo-m0-Do9" firstAttribute="top" secondItem="nA1-wO-IGR" secondAttribute="bottom" constant="8" symbolic="YES" id="H0s-Kx-k9o"/>
                             <constraint firstItem="q2E-CO-qYJ" firstAttribute="leading" secondItem="J8b-mR-JdM" secondAttribute="leading" id="H9e-0x-ydu"/>
-                            <constraint firstItem="5wo-m0-Do9" firstAttribute="centerX" secondItem="ST0-35-4Yy" secondAttribute="centerX" id="IZl-m4-RvH"/>
-                            <constraint firstItem="q2E-CO-qYJ" firstAttribute="top" secondItem="ST0-35-4Yy" secondAttribute="bottom" constant="3" id="IdT-CK-Iab"/>
                             <constraint firstItem="IMd-5Z-2GB" firstAttribute="top" secondItem="1nh-cl-An2" secondAttribute="bottom" constant="10" id="NAO-bM-y8M"/>
-                            <constraint firstItem="ST0-35-4Yy" firstAttribute="top" secondItem="fOW-35-bcq" secondAttribute="bottom" id="Z5d-15-Pl4"/>
+                            <constraint firstItem="q2E-CO-qYJ" firstAttribute="top" secondItem="ST0-35-4Yy" secondAttribute="bottom" constant="3" id="aWn-ZQ-Ne5"/>
                             <constraint firstItem="5wo-m0-Do9" firstAttribute="leading" secondItem="q2E-CO-qYJ" secondAttribute="leading" id="aYI-D2-F3v"/>
                             <constraint firstItem="1nh-cl-An2" firstAttribute="centerX" secondItem="5wo-m0-Do9" secondAttribute="centerX" id="rMM-Mn-CaF"/>
+                            <constraint firstItem="ST0-35-4Yy" firstAttribute="centerX" secondItem="q2E-CO-qYJ" secondAttribute="centerX" id="usQ-og-8Sh"/>
                             <constraint firstItem="IMd-5Z-2GB" firstAttribute="top" secondItem="5wo-m0-Do9" secondAttribute="bottom" constant="46" id="xgp-WK-a1Z"/>
                         </constraints>
                     </view>
@@ -172,14 +173,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDq-ap-tyh">
+                                <rect key="frame" x="277" y="517" width="46" height="53"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="rq4-jQ-W1H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.043137254901960784" green="0.062745098039215685" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Dea-Fz-H2k" kind="presentation" id="1HR-hz-9Ow"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NDq-ap-tyh" firstAttribute="centerX" secondItem="2Hp-Mh-43J" secondAttribute="centerX" id="58N-Xm-s3n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Hp-Mh-43J" secondAttribute="trailing" constant="-20" id="88n-e0-eXH"/>
                             <constraint firstItem="QVP-Pl-eJv" firstAttribute="top" secondItem="2Hp-Mh-43J" secondAttribute="bottom" id="BKf-JP-teP"/>
                             <constraint firstItem="2Hp-Mh-43J" firstAttribute="leading" secondItem="6k7-7v-wS4" secondAttribute="leadingMargin" constant="-20" id="cwh-cb-wT7"/>
                             <constraint firstItem="2Hp-Mh-43J" firstAttribute="top" secondItem="6k7-7v-wS4" secondAttribute="topMargin" id="eM7-5i-SCH"/>
+                            <constraint firstItem="QVP-Pl-eJv" firstAttribute="top" secondItem="NDq-ap-tyh" secondAttribute="bottom" constant="30" id="nlK-P6-myn"/>
+                            <constraint firstItem="NDq-ap-tyh" firstAttribute="top" secondItem="SlB-Mb-IPc" secondAttribute="bottom" constant="497" id="xts-SH-KyR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -191,4 +209,7 @@
             <point key="canvasLocation" x="1665" y="339"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FY1-5f-ywQ"/>
+    </inferredMetricsTieBreakers>
 </document>
